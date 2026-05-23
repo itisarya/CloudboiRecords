@@ -1,4 +1,4 @@
-a<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -21,7 +21,6 @@ a<!DOCTYPE html>
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     html { scroll-behavior: smooth; }
 
     body {
@@ -33,19 +32,14 @@ a<!DOCTYPE html>
       overflow-x: hidden;
     }
 
-    /* ── LOGIN ───────────────────────────────────────────── */
+    /* ── LOGIN ── */
     #loginScreen {
-      position: fixed;
-      inset: 0;
+      position: fixed; inset: 0;
       background: var(--bg);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
       z-index: 9999;
-      gap: 0;
     }
-
     .login-box {
       background: var(--surface);
       border: 1px solid var(--border);
@@ -55,316 +49,215 @@ a<!DOCTYPE html>
       text-align: center;
       animation: fadeUp 0.6s ease both;
     }
-
     .login-logo {
       font-family: 'Space Mono', monospace;
-      font-size: 28px;
-      color: var(--green2);
-      letter-spacing: -0.5px;
-      margin-bottom: 8px;
+      font-size: 28px; color: var(--green2);
+      letter-spacing: -0.5px; margin-bottom: 8px;
     }
-
-    .login-sub {
-      color: var(--muted);
-      font-size: 14px;
-      margin-bottom: 32px;
-    }
-
+    .login-sub { color: var(--muted); font-size: 14px; margin-bottom: 32px; }
     .login-box input[type="password"] {
-      width: 100%;
-      padding: 14px 18px;
+      width: 100%; padding: 14px 18px;
       background: var(--surface2);
       border: 1px solid var(--border);
-      border-radius: 12px;
-      color: var(--text);
+      border-radius: 12px; color: var(--text);
       font-family: 'DM Sans', sans-serif;
-      font-size: 15px;
-      outline: none;
-      transition: border-color 0.2s;
-      text-align: left;
+      font-size: 15px; outline: none;
+      transition: border-color 0.2s; text-align: left;
     }
-
-    .login-box input[type="password"]:focus {
-      border-color: var(--green);
-    }
-
+    .login-box input[type="password"]:focus { border-color: var(--green); }
     .login-box input::placeholder { color: var(--muted); }
-
     .login-btn {
-      width: 100%;
-      margin-top: 14px;
-      padding: 14px;
-      background: var(--green);
-      color: #050f09;
-      border: none;
-      border-radius: 12px;
+      width: 100%; margin-top: 14px; padding: 14px;
+      background: var(--green); color: #050f09;
+      border: none; border-radius: 12px;
       font-family: 'DM Sans', sans-serif;
-      font-size: 15px;
-      font-weight: 600;
-      cursor: pointer;
+      font-size: 15px; font-weight: 600; cursor: pointer;
       transition: background 0.2s, transform 0.1s;
     }
-
     .login-btn:hover  { background: var(--green2); }
     .login-btn:active { transform: scale(0.98); }
+    .login-err { color: #ff6b6b; font-size: 13px; margin-top: 12px; min-height: 18px; }
 
-    .login-err {
-      color: #ff6b6b;
-      font-size: 13px;
-      margin-top: 12px;
-      min-height: 18px;
-    }
-
-    /* ── HEADER ──────────────────────────────────────────── */
+    /* ── HEADER ── */
     header {
-      text-align: center;
-      padding: 80px 20px 60px;
-      position: relative;
-      overflow: hidden;
+      text-align: center; padding: 80px 20px 60px;
+      position: relative; overflow: hidden;
     }
-
     header::before {
-      content: '';
-      position: absolute;
-      top: -60px; left: 50%;
-      transform: translateX(-50%);
+      content: ''; position: absolute;
+      top: -60px; left: 50%; transform: translateX(-50%);
       width: 500px; height: 300px;
       background: radial-gradient(ellipse, rgba(29,185,84,0.12) 0%, transparent 70%);
       pointer-events: none;
     }
-
     .site-title {
       font-family: 'Space Mono', monospace;
       font-size: clamp(32px, 7vw, 56px);
-      font-weight: 700;
-      color: var(--green2);
-      letter-spacing: -1px;
-      line-height: 1.1;
+      font-weight: 700; color: var(--green2);
+      letter-spacing: -1px; line-height: 1.1;
       animation: fadeUp 0.7s ease both;
     }
-
     .site-sub {
-      color: var(--muted);
-      font-size: 16px;
-      margin-top: 10px;
-      letter-spacing: 0.5px;
+      color: var(--muted); font-size: 16px;
+      margin-top: 10px; letter-spacing: 0.5px;
       animation: fadeUp 0.7s 0.1s ease both;
     }
 
-    /* ── NAV ─────────────────────────────────────────────── */
+    /* ── NAV ── */
     nav {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 4px;
-      padding: 10px 20px;
+      position: sticky; top: 0; z-index: 100;
+      display: flex; justify-content: center;
+      flex-wrap: wrap; gap: 4px; padding: 10px 20px;
       background: rgba(5,15,9,0.85);
       backdrop-filter: blur(14px);
       border-bottom: 1px solid var(--border);
     }
-
     nav a {
-      color: var(--muted);
-      text-decoration: none;
-      font-weight: 500;
-      font-size: 14px;
-      padding: 7px 16px;
-      border-radius: 30px;
-      transition: color 0.2s, background 0.2s;
-      letter-spacing: 0.3px;
+      color: var(--muted); text-decoration: none;
+      font-weight: 500; font-size: 14px;
+      padding: 7px 16px; border-radius: 30px;
+      transition: color 0.2s, background 0.2s; letter-spacing: 0.3px;
     }
+    nav a:hover { color: var(--text); background: var(--green-dim); }
+    nav a.active { color: var(--green2); background: var(--green-dim); }
 
-    nav a:hover {
-      color: var(--text);
-      background: var(--green-dim);
-    }
-
-    nav a.active {
-      color: var(--green2);
-      background: var(--green-dim);
-    }
-
-    /* ── SECTIONS ────────────────────────────────────────── */
-    .section {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 60px 24px;
-    }
-
+    /* ── SECTIONS ── */
+    .section { max-width: 960px; margin: 0 auto; padding: 60px 24px; }
     .section-header {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      margin-bottom: 32px;
-      padding-bottom: 18px;
+      display: flex; align-items: center; gap: 14px;
+      margin-bottom: 32px; padding-bottom: 18px;
       border-bottom: 1px solid var(--border);
     }
-
     .section-icon {
       width: 40px; height: 40px;
-      background: var(--green-dim);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 18px;
-      flex-shrink: 0;
+      background: var(--green-dim); border: 1px solid var(--border);
+      border-radius: 10px; display: flex;
+      align-items: center; justify-content: center;
+      font-size: 18px; flex-shrink: 0;
     }
-
     .section-title {
       font-family: 'Space Mono', monospace;
-      font-size: 22px;
-      font-weight: 700;
-      color: var(--text);
-      letter-spacing: -0.3px;
+      font-size: 22px; font-weight: 700;
+      color: var(--text); letter-spacing: -0.3px;
     }
-
     .section-count {
-      margin-left: auto;
-      font-size: 12px;
-      color: var(--muted);
-      background: var(--surface2);
-      border: 1px solid var(--border);
-      padding: 3px 10px;
-      border-radius: 20px;
+      margin-left: auto; font-size: 12px; color: var(--muted);
+      background: var(--surface2); border: 1px solid var(--border);
+      padding: 3px 10px; border-radius: 20px;
     }
 
-    /* ── DIVIDER ─────────────────────────────────────────── */
-    .divider {
-      max-width: 960px;
-      margin: 0 auto;
-      height: 1px;
-      background: var(--border);
-    }
+    .divider { max-width: 960px; margin: 0 auto; height: 1px; background: var(--border); }
 
-    /* ── GRID ────────────────────────────────────────────── */
+    /* ── GRID & CARDS ── */
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
       gap: 16px;
     }
-
-    /* ── CARDS ───────────────────────────────────────────── */
     .card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 20px;
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 16px; padding: 20px;
       transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s;
     }
-
     .card:hover {
       transform: translateY(-4px);
       border-color: rgba(29,185,84,0.35);
       box-shadow: 0 8px 32px rgba(29,185,84,0.12);
     }
-
     .card-label {
-      font-size: 12px;
-      font-weight: 600;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      color: var(--green);
-      margin-bottom: 4px;
+      font-size: 12px; font-weight: 600;
+      letter-spacing: 1px; text-transform: uppercase;
+      color: var(--green); margin-bottom: 4px;
     }
-
     .card h3 {
       font-family: 'DM Sans', sans-serif;
-      font-size: 16px;
-      font-weight: 600;
-      color: var(--text);
-      margin-bottom: 12px;
+      font-size: 16px; font-weight: 600;
+      color: var(--text); margin-bottom: 12px;
     }
 
-    audio, video {
-      width: 100%;
-      border-radius: 10px;
-      margin-top: 4px;
-      accent-color: var(--green);
+    /* ── VIDEO EMBEDS ── */
+    .video-wrap {
+      position: relative; width: 100%;
+      padding-bottom: 56.25%; /* 16:9 */
+      border-radius: 10px; overflow: hidden;
+      background: #000; margin-top: 4px;
+    }
+    .video-wrap iframe {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%;
+      border: none; border-radius: 10px;
     }
 
-    /* ── LYRICS ──────────────────────────────────────────── */
+    /* placeholder shown before iframe loads */
+    .video-placeholder {
+      position: absolute; inset: 0;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      gap: 10px; background: var(--surface2);
+      border-radius: 10px; cursor: pointer;
+      border: 1px dashed var(--border);
+      transition: background 0.2s;
+    }
+    .video-placeholder:hover { background: rgba(29,185,84,0.08); }
+    .video-placeholder .play-icon { font-size: 36px; }
+    .video-placeholder p { color: var(--muted); font-size: 13px; }
+    .video-placeholder small { color: var(--muted); font-size: 11px; opacity: 0.6; }
+
+    /* ── AUDIO ── */
+    audio {
+      width: 100%; border-radius: 10px;
+      margin-top: 4px; accent-color: var(--green);
+    }
+
+    /* ── LYRICS ── */
     .lyrics-body {
-      font-size: 15px;
-      line-height: 1.9;
-      color: var(--muted);
-      white-space: pre-line;
+      font-size: 15px; line-height: 1.9;
+      color: var(--muted); white-space: pre-line;
     }
+    .lyrics-toggle {
+      display: inline-block; margin: 10px 0 6px;
+      padding: 6px 14px; background: var(--green-dim);
+      border: 1px solid var(--border); border-radius: 20px;
+      color: var(--green2); font-family: 'DM Sans', sans-serif;
+      font-size: 13px; font-weight: 500; cursor: pointer;
+      transition: background 0.2s;
+    }
+    .lyrics-toggle:hover { background: rgba(29,185,84,0.25); }
 
-    /* ── PHOTOS ──────────────────────────────────────────── */
+    /* ── PHOTOS ── */
     .photo-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
       gap: 12px;
     }
-
     .photo-item {
-      position: relative;
-      border-radius: 14px;
-      overflow: hidden;
-      border: 1px solid var(--border);
-      aspect-ratio: 1;
+      position: relative; border-radius: 14px;
+      overflow: hidden; border: 1px solid var(--border); aspect-ratio: 1;
     }
-
     .photo-item img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
+      width: 100%; height: 100%;
+      object-fit: cover; display: block;
       transition: transform 0.35s;
     }
-
     .photo-item:hover img { transform: scale(1.07); }
 
-    /* ── FOOTER ──────────────────────────────────────────── */
+    /* ── FOOTER ── */
     footer {
-      text-align: center;
-      padding: 48px 20px;
-      color: var(--muted);
-      font-size: 14px;
+      text-align: center; padding: 48px 20px;
+      color: var(--muted); font-size: 14px;
       border-top: 1px solid var(--border);
     }
-
     footer span { color: var(--green); }
 
-    /* ── LYRICS TOGGLE ───────────────────────────────────── */
-    .lyrics-toggle {
-      display: inline-block;
-      margin: 10px 0 6px;
-      padding: 6px 14px;
-      background: var(--green-dim);
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      color: var(--green2);
-      font-family: 'DM Sans', sans-serif;
-      font-size: 13px;
-      font-weight: 500;
-      cursor: pointer;
-      transition: background 0.2s;
-    }
-
-    .lyrics-toggle:hover { background: rgba(29,185,84,0.25); }
-
-    /* ── ANIMATIONS ──────────────────────────────────────── */
+    /* ── ANIMATIONS ── */
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(18px); }
       to   { opacity: 1; transform: translateY(0); }
     }
+    .fade-in { opacity: 0; transform: translateY(16px); transition: opacity 0.5s ease, transform 0.5s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
 
-    .fade-in {
-      opacity: 0;
-      transform: translateY(16px);
-      transition: opacity 0.5s ease, transform 0.5s ease;
-    }
-
-    .fade-in.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* ── RESPONSIVE ──────────────────────────────────────── */
+    /* ── RESPONSIVE ── */
     @media (max-width: 600px) {
       .grid { grid-template-columns: 1fr; }
       .photo-grid { grid-template-columns: repeat(2, 1fr); }
@@ -400,107 +293,119 @@ a<!DOCTYPE html>
     <a href="https://www.instagram.com/rjtttttttt?igsh=NDZobGhleW5qYWRq" target="_blank" rel="noopener">Instagram ↗</a>
   </nav>
 
-  <!-- ── VIDEOS ── -->
-
+  <!-- ══════════════════════════════════════════════
+       VIDEOS
+       HOW TO ADD A VIDEO:
+       1. Upload your video to Google Drive
+       2. Right-click → Share → "Anyone with the link"
+       3. Copy the link — it looks like:
+          https://drive.google.com/file/d/XXXXXXXXXX/view
+       4. Copy just the ID part (XXXXXXXXXX)
+       5. Paste it into src below replacing the placeholder
+          e.g.  src="https://drive.google.com/file/d/XXXXXXXXXX/preview"
+  ══════════════════════════════════════════════ -->
   <section class="section" id="videos">
-
     <div class="section-header fade-in">
       <div class="section-icon">🎬</div>
       <h2 class="section-title">Videos</h2>
-      <span class="section-count">4 video</span> <!--CHANGE THE SECTION COUNT WHEN ADDING THE SONGS -->
+      <span class="section-count">4 videos</span>
     </div>
     <div class="grid">
-      <div class="card">
-         <div class="card-label">Video 1</div>
-      <h3>Jee Karda - Electric</h3>
 
-      <video controls>
-        <source src="videos/video1.mp4" type="video/mp4" />
-      </video>
-    </div>
+      <!-- VIDEO 1 — replace PASTE_DRIVE_ID_1 with your real Google Drive file ID -->
+      <div class="card fade-in">
+        <div class="card-label">Video 1</div>
+        <h3>Jee Karda - Electric</h3>
+        <div class="video-wrap">
+          <iframe
+            src="https://drive.google.com/file/d/1s8JXSOGR3DA3bSGMzqXaeofMGoNrrtNR/preview"
+            allow="autoplay"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
 
-    <div class="card">
-      <div class="card-label">Video 2</div>
-      <h3>Khat ft Sourav</h3>
+      <!-- VIDEO 2 -->
+      <div class="card fade-in">
+        <div class="card-label">Video 2</div>
+        <h3>Khat ft Sourav</h3>
+        <div class="video-wrap">
+          <iframe
+            src="https://drive.google.com/file/d/1Db4iB1Xaafowu9PQN1e6oxnRptV-XKk4/preview"
+            allow="autoplay"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
 
-      <video controls>
-        <source src="videos/video2.mp4" type="video/mp4" />
-      </video>
-    </div>
+      <!-- VIDEO 3 -->
+      <div class="card fade-in">
+        <div class="card-label">Video 3</div>
+        <h3>Seasons</h3>
+        <div class="video-wrap">
+          <iframe
+            src="https://drive.google.com/file/d/1M8VXHNoJWz5dtrnBhDd2y6yyK7oP-94K/preview"
+            allow="autoplay"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
 
-    <div class="card">
-      <div class="card-label">Video 3</div>
-      <h3>Seasons</h3>
+      <!-- VIDEO 4 -->
+      <div class="card fade-in">
+        <div class="card-label">Video 4</div>
+        <h3>Khat ft Sourav (Alt)</h3>
+        <div class="video-wrap">
+          <iframe
+            src="https://drive.google.com/file/d/1DWKGifgl4NRgBm0gfAf8sRN9gF84LpHU/preview"
+            allow="autoplay"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
 
-      <video controls>
-        <source src="videos/video3.mp4" type="video/mp4" />
-      </video>
-    </div>
+      <!-- ADD MORE VIDEOS: copy one card block above and replace the ID -->
 
-    <div class="card">
-      <div class="card-label">Video 4</div>
-      <h3> Khat ft Sourav</h3>
-
-      <video controls>
-        <source src="videos/video4.mp4" type="video/mp4" />
-      </video>
-    </div>
-      <!-- Add more video cards below this line -->
     </div>
   </section>
 
   <div class="divider"></div>
 
-  <!-- ── AUDIO ── -------------------------------------------------------------------------->
+  <!-- ── AUDIO ── -->
   <section class="section" id="music">
     <div class="section-header fade-in">
       <div class="section-icon">🎵</div>
       <h2 class="section-title">Audio</h2>
-      <span class="section-count">4 track</span> 
+      <span class="section-count">4 tracks</span>
     </div>
     <div class="grid">
       <div class="card fade-in">
         <div class="card-label">Track 1</div>
-      <h3>Already Yours</h3>
-
-      <audio controls>
-        <source src="music/song1.mp3" type="audio/mpeg" />
-      </audio>
-    </div>
-
-    <div class="card fade-in">
-      <div class="card-label">Track 2</div>
-      <h3>Bohemian Rhapsody</h3>
-
-      <audio controls>
-        <source src="music/song2.mp3" type="audio/mpeg" />
-      </audio>
-    </div>
-
-    <div class="card fade-in">
-      <div class="card-label">Track 3</div>
-      <h3>Seasons</h3>
-
-      <audio controls>
-        <source src="music/song3.mp3" type="audio/mpeg" />
-      </audio>
-    </div>
-
-    <div class="card fade-in">
-      <div class="card-label">Track 4</div>
-      <h3>If I Could Fly</h3>
-
-      <audio controls>
-        <source src="music/song4.mp3" type="audio/mpeg" />
-      </audio>
-    </div>
-      <!-- Add more audio cards below this line -->
+        <h3>Already Yours</h3>
+        <audio controls><source src="music/song1.mp3" type="audio/mpeg" /></audio>
+      </div>
+      <div class="card fade-in">
+        <div class="card-label">Track 2</div>
+        <h3>Bohemian Rhapsody</h3>
+        <audio controls><source src="music/song2.mp3" type="audio/mpeg" /></audio>
+      </div>
+      <div class="card fade-in">
+        <div class="card-label">Track 3</div>
+        <h3>Seasons</h3>
+        <audio controls><source src="music/song3.mp3" type="audio/mpeg" /></audio>
+      </div>
+      <div class="card fade-in">
+        <div class="card-label">Track 4</div>
+        <h3>If I Could Fly</h3>
+        <audio controls><source src="music/song4.mp3" type="audio/mpeg" /></audio>
+      </div>
+      <!-- ADD MORE: copy a card block above -->
     </div>
   </section>
 
   <div class="divider"></div>
 
-  <!-- ── LYRICS ── ------------------------------------------------------------------------------------------>
+  <!-- ── LYRICS ── -->
   <section class="section" id="lyrics">
     <div class="section-header fade-in">
       <div class="section-icon">✍️</div>
@@ -531,7 +436,7 @@ a<!DOCTYPE html>
       <div class="photo-item fade-in"><img src="photos/photo4.jpg" alt="Photo 4" loading="lazy" /></div>
       <div class="photo-item fade-in"><img src="photos/photo5.jpg" alt="Photo 5" loading="lazy" /></div>
       <div class="photo-item fade-in"><img src="photos/photo6.jpg" alt="Photo 6" loading="lazy" /></div>
-      <!-- Add more photo items below this line -->
+      <!-- ADD MORE: copy a photo-item block above -->
     </div>
   </section>
 
@@ -558,28 +463,20 @@ a<!DOCTYPE html>
     }
   }
 
-  /* Allow Enter key on password field */
   document.getElementById('pass').addEventListener('keydown', e => {
     if (e.key === 'Enter') login();
   });
 
-  /* ── Lyrics loader ──────────────────────────────────────
-     1. Reads lyrics/index.json  →  list of { title, file }
-     2. Fetches each .txt file from the lyrics/ folder
-     3. Builds a card per song with expand/collapse toggle
-  ───────────────────────────────────────────────────────── */
+  /* ── Lyrics loader ── */
   async function loadLyrics() {
     const grid  = document.getElementById('lyricsGrid');
     const count = document.getElementById('lyricsCount');
-
     try {
       const res   = await fetch('lyrics/index.json');
-      if (!res.ok) throw new Error('index.json not found');
+      if (!res.ok) throw new Error('not found');
       const songs = await res.json();
-
       count.textContent = songs.length + (songs.length === 1 ? ' song' : ' songs');
       grid.innerHTML = '';
-
       for (let i = 0; i < songs.length; i++) {
         const song = songs[i];
         let text = '';
@@ -587,7 +484,6 @@ a<!DOCTYPE html>
           const r = await fetch('lyrics/' + song.file);
           text = r.ok ? await r.text() : '(Could not load file)';
         } catch { text = '(Could not load file)'; }
-
         const card = document.createElement('div');
         card.className = 'card fade-in lyrics-card';
         const lid = 'lyr-' + i;
@@ -598,18 +494,16 @@ a<!DOCTYPE html>
           '<div class="lyrics-body" id="' + lid + '" hidden>' + escHtml(text) + '</div>';
         grid.appendChild(card);
       }
-
       document.querySelectorAll('.fade-in:not(.visible)').forEach(el => {
         setTimeout(() => el.classList.add('visible'), 80);
       });
-
     } catch(err) {
       count.textContent = 'error';
       grid.innerHTML =
         '<div class="card fade-in visible">' +
         '<div class="card-label" style="color:#ff6b6b;">Error</div>' +
         '<h3>Could not load lyrics</h3>' +
-        '<p class="lyrics-body">Make sure <code>lyrics/index.json</code> exists and lists your .txt files.</p>' +
+        '<p class="lyrics-body">Make sure <code>lyrics/index.json</code> exists.</p>' +
         '</div>';
     }
   }
@@ -631,9 +525,8 @@ a<!DOCTYPE html>
     return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
   }
 
-  /* ── Scroll-reveal animations ── */
+  /* ── Scroll animations ── */
   function initAnimations() {
-    const items = document.querySelectorAll('.fade-in');
     const observer = new IntersectionObserver(entries => {
       entries.forEach((entry, i) => {
         if (entry.isIntersecting) {
@@ -642,13 +535,13 @@ a<!DOCTYPE html>
         }
       });
     }, { threshold: 0.1 });
-    items.forEach(el => observer.observe(el));
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
   }
 
-  /* ── Active nav link on scroll ── */
+  /* ── Active nav ── */
   function initNav() {
     const sections = document.querySelectorAll('section.section');
-    const links = document.querySelectorAll('nav a');
+    const links    = document.querySelectorAll('nav a');
     const io = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
