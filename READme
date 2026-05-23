@@ -1,0 +1,369 @@
+# 🎧 Cloudboi Records
+
+A private artist archive website for music, videos, lyrics, and memories.
+
+Built with:
+- HTML
+- CSS
+- JavaScript
+- Google Drive video embeds
+- GitHub Pages hosting
+
+────────────────────────────────────────────
+
+# 🌐 FEATURES
+
+✅ Password protected homepage
+✅ Mobile responsive design
+✅ Video section
+✅ Audio player section
+✅ Lyrics section loaded from TXT files
+✅ Photo gallery
+✅ Instagram link
+✅ Smooth scrolling animations
+✅ GitHub Pages compatible
+
+────────────────────────────────────────────
+
+# 📁 PROJECT STRUCTURE
+
+cloudboi-records/
+
+index.html
+
+music/
+song1.mp3
+song2.mp3
+song3.mp3
+song4.mp3
+
+photos/
+photo1.jpg
+photo2.jpg
+photo3.jpg
+photo4.jpg
+photo5.jpg
+photo6.jpg
+
+lyrics/
+index.json
+lyrics1.txt
+lyrics2.txt
+
+────────────────────────────────────────────
+
+# 🔐 CHANGING THE PASSWORD
+
+Inside index.html find:
+
+if (p === 'lovefreddie')
+
+Replace:
+
+lovefreddie
+
+with your own password.
+
+Example:
+
+if (p === 'cloudforever')
+
+────────────────────────────────────────────
+
+# 🎬 ADDING VIDEOS
+
+Videos use Google Drive embeds.
+
+STEP 1 — Upload Video To Google Drive
+
+Upload your .mp4 video to Google Drive.
+
+STEP 2 — Make Video Public
+
+Right click the video → Share
+
+Change access to:
+
+Anyone with the link
+
+STEP 3 — Copy Video Link
+
+Example Google Drive link:
+
+https://drive.google.com/file/d/1ABCXYZ123456/view
+
+STEP 4 — Copy ONLY The File ID
+
+From:
+
+https://drive.google.com/file/d/1ABCXYZ123456/view
+
+Copy:
+
+1ABCXYZ123456
+
+STEP 5 — Replace The iframe src
+
+Find:
+
+<iframe
+  src="https://drive.google.com/file/d/PASTE_DRIVE_ID_1/preview"
+  allow="autoplay"
+  allowfullscreen>
+</iframe>
+
+Replace with:
+
+<iframe
+  src="https://drive.google.com/file/d/1ABCXYZ123456/preview"
+  allow="autoplay"
+  allowfullscreen>
+</iframe>
+
+────────────────────────────────────────────
+
+# ➕ ADDING MORE VIDEOS
+
+Copy one full video card:
+
+<div class="card fade-in">
+
+  <div class="card-label">Video 5</div>
+
+  <h3>New Video</h3>
+
+  <div class="video-wrap">
+
+    <iframe
+      src="https://drive.google.com/file/d/FILE_ID/preview"
+      allow="autoplay"
+      allowfullscreen>
+    </iframe>
+
+  </div>
+
+</div>
+
+Paste it below the last video card.
+
+────────────────────────────────────────────
+
+# 🎵 ADDING AUDIO
+
+Place .mp3 files inside:
+
+music/
+
+Example:
+
+music/song5.mp3
+
+Add Audio Card:
+
+<div class="card fade-in">
+
+  <div class="card-label">Track 5</div>
+
+  <h3>New Song</h3>
+
+  <audio controls>
+    <source src="music/song5.mp3" type="audio/mpeg" />
+  </audio>
+
+</div>
+
+Paste below existing tracks.
+
+────────────────────────────────────────────
+
+# ✍️ LYRICS SYSTEM
+
+Lyrics are loaded automatically from TXT files.
+
+STEP 1 — Create TXT File
+
+Inside:
+
+lyrics/
+
+create:
+
+lyrics3.txt
+
+STEP 2 — Add Lyrics
+
+Example:
+
+Late nights in the studio
+Clouds over the city
+
+STEP 3 — Update index.json
+
+Open:
+
+lyrics/index.json
+
+Example:
+
+[
+  {
+    "title": "Already Yours",
+    "file": "lyrics1.txt"
+  },
+
+  {
+    "title": "Seasons",
+    "file": "lyrics2.txt"
+  }
+]
+
+Add another object:
+
+{
+  "title": "New Song",
+  "file": "lyrics3.txt"
+}
+
+Final example:
+
+[
+  {
+    "title": "Already Yours",
+    "file": "lyrics1.txt"
+  },
+
+  {
+    "title": "Seasons",
+    "file": "lyrics2.txt"
+  },
+
+  {
+    "title": "New Song",
+    "file": "lyrics3.txt"
+  }
+]
+
+────────────────────────────────────────────
+
+# 📸 ADDING PHOTOS
+
+Place images inside:
+
+photos/
+
+Example:
+
+photo7.jpg
+
+Add Photo Block:
+
+<div class="photo-item fade-in">
+  <img
+    src="photos/photo7.jpg"
+    alt="Photo 7"
+    loading="lazy"
+  />
+</div>
+
+Paste below existing photos.
+
+────────────────────────────────────────────
+
+# 📱 MOBILE SUPPORT
+
+The website already supports:
+- phones
+- tablets
+- desktop
+- responsive layouts
+
+────────────────────────────────────────────
+
+# 🎨 CHANGING COLORS
+
+Inside CSS:
+
+:root {
+  --green: #1db954;
+}
+
+You can replace colors.
+
+Example:
+
+--green: #ff4d8d;
+
+────────────────────────────────────────────
+
+# 📷 UPDATING INSTAGRAM LINK
+
+Find:
+
+<a href="https://www.instagram.com/rjtttttttt?igsh=NDZobGhleW5qYWRq">
+
+Replace with your own Instagram profile link.
+
+────────────────────────────────────────────
+
+# 🌐 HOSTING ON GITHUB PAGES
+Your website URL becomes:
+
+https://YOURUSERNAME.github.io/REPOSITORY-NAME/
+
+────────────────────────────────────────────
+
+# ⚠️ IMPORTANT
+
+File names are case-sensitive.
+
+Example:
+
+photo1.jpg
+
+is NOT the same as:
+
+Photo1.jpg
+
+────────────────────────────────────────────
+
+# ⚠️ COMMON PROBLEMS
+
+VIDEOS NOT LOADING
+
+Check:
+- Google Drive sharing is public
+- iframe link uses /preview
+- File ID is correct
+
+AUDIO NOT PLAYING
+
+Check:
+- .mp3 exists in music/
+- filename matches code exactly
+
+LYRICS NOT SHOWING
+
+Check:
+- lyrics/index.json exists
+- JSON syntax is valid
+- TXT filenames match
+
+IMAGES MISSING
+
+Check:
+- image exists in photos/
+- filename matches exactly
+
+────────────────────────────────────────────
+
+# ❤️ NOTES
+
+This website is designed as a personal creative archive for:
+- music
+- unreleased songs
+- videos
+- lyrics
+- memories
+- photography
+
+Made with love ☁️
