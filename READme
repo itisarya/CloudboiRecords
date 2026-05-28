@@ -11,21 +11,21 @@ Built with:
 
 ────────────────────────────────────────────
 
-# 🌐 FEATURES
+#  FEATURES
 
-✅ Password protected homepage
-✅ Mobile responsive design
-✅ Video section
-✅ Audio player section
-✅ Lyrics section loaded from TXT files
-✅ Photo gallery
-✅ Instagram link
-✅ Smooth scrolling animations
-✅ GitHub Pages compatible
+ Password protected homepage
+ Mobile responsive design
+ Video section
+ Audio player section
+ Lyrics section loaded from TXT files
+ Photo gallery
+ Instagram link
+ Smooth scrolling animations
+ GitHub Pages compatible
 
 ────────────────────────────────────────────
 
-# 📁 PROJECT STRUCTURE
+#  PROJECT STRUCTURE
 
 cloudboi-records/
 
@@ -52,7 +52,7 @@ lyrics2.txt
 
 ────────────────────────────────────────────
 
-# 🔐 CHANGING THE PASSWORD
+#  CHANGING THE PASSWORD
 
 Inside index.html find:
 
@@ -70,7 +70,7 @@ if (p === 'cloudforever')
 
 ────────────────────────────────────────────
 
-# 🎬 ADDING VIDEOS
+#  ADDING VIDEOS
 
 Videos use Google Drive embeds.
 
@@ -122,7 +122,7 @@ Replace with:
 
 ────────────────────────────────────────────
 
-# ➕ ADDING MORE VIDEOS
+#  ADDING MORE VIDEOS
 
 Copy one full video card:
 
@@ -148,7 +148,7 @@ Paste it below the last video card.
 
 ────────────────────────────────────────────
 
-# 🎵 ADDING AUDIO
+#  ADDING AUDIO
 
 Place .mp3 files inside:
 
@@ -176,7 +176,7 @@ Paste below existing tracks.
 
 ────────────────────────────────────────────
 
-# ✍️ LYRICS SYSTEM
+#  LYRICS SYSTEM
 
 Lyrics are loaded automatically from TXT files.
 
@@ -245,7 +245,7 @@ Final example:
 
 ────────────────────────────────────────────
 
-# 📸 ADDING PHOTOS
+#  ADDING PHOTOS
 
 Place images inside:
 
@@ -269,7 +269,7 @@ Paste below existing photos.
 
 ────────────────────────────────────────────
 
-# 📱 MOBILE SUPPORT
+#  MOBILE SUPPORT
 
 The website already supports:
 - phones
@@ -279,7 +279,7 @@ The website already supports:
 
 ────────────────────────────────────────────
 
-# 🎨 CHANGING COLORS
+#  CHANGING COLORS
 
 Inside CSS:
 
@@ -295,7 +295,7 @@ Example:
 
 ────────────────────────────────────────────
 
-# 📷 UPDATING INSTAGRAM LINK
+#  UPDATING INSTAGRAM LINK
 
 Find:
 
@@ -305,14 +305,14 @@ Replace with your own Instagram profile link.
 
 ────────────────────────────────────────────
 
-# 🌐 HOSTING ON GITHUB PAGES
+#  HOSTING ON GITHUB PAGES
 Your website URL becomes:
 
 https://YOURUSERNAME.github.io/REPOSITORY-NAME/
 
 ────────────────────────────────────────────
 
-# ⚠️ IMPORTANT
+#  IMPORTANT
 
 File names are case-sensitive.
 
@@ -326,7 +326,7 @@ Photo1.jpg
 
 ────────────────────────────────────────────
 
-# ⚠️ COMMON PROBLEMS
+#  COMMON PROBLEMS
 
 VIDEOS NOT LOADING
 
@@ -356,7 +356,7 @@ Check:
 
 ────────────────────────────────────────────
 
-# ❤️ NOTES
+#  NOTES
 
 This website is designed as a personal creative archive for:
 - music
@@ -366,4 +366,4 @@ This website is designed as a personal creative archive for:
 - memories
 - photography
 
-Made with love ☁️
+Made with love 
